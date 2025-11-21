@@ -32,6 +32,8 @@ public class TileActivity extends AppCompatActivity {
         tvTileTitle.setText(title);
         tvTileDescription.setText(desc);
 
+        TemiController.speakForTile(position, desc);
+
         btnGoResult.setOnClickListener(v -> {
             Intent goResult = new Intent(TileActivity.this, ResultActivity.class);
             goResult.putExtra("position", position);
